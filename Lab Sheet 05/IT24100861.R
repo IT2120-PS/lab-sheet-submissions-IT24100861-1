@@ -10,7 +10,8 @@ histogram1 <- hist(
   main = "Histogram for Delivery Times", 
   breaks = seq(20, 70, length = 10), 
   right = FALSE)
-
+#3 
+  The  histogram is mostly symmetric but slightly skewed to the right.
 #4
 cum_freq <- cumsum(table(cut(Delivery_Times$Delivery_Time, breaks=seq(20, 70, by=5), right = FALSE)))
 plot(seq(20, 65, by=5), cum_freq, type='o',
@@ -19,4 +20,5 @@ plot(seq(20, 65, by=5), cum_freq, type='o',
      ylab="Cumulative Frequency",
      ylim=c(0, max(cum_freq)),
      pch=16)
+
 
